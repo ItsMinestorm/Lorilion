@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us — LORILLION Limited</title>
+  <meta name="description" content="About LORILLION Limited — pioneering sustainable electrification solutions and clean energy technologies." />
+  <link rel="icon" type="image/x-icon" href="assets/logo.png" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: { DEFAULT: '#282667', dark: '#101544', ink: '#303030' } },
+          fontFamily: { display: ['Merriweather', 'Georgia', 'serif'], sans: ['Montserrat', 'Arial', 'Helvetica', 'sans-serif'] }
+        }
+      }
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/site.css" />
+</head>
+
+<body class="bg-white text-brand-ink antialiased">
+
+  <!-- ======================= HEADER ======================= -->
+  <header id="siteHeader" class="fixed top-0 inset-x-0 z-50 bg-white/95">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3 group" aria-label="LORILLION Limited — Home">
+          <img src="assets/logo.png" alt="LORILLION Limited logo"
+               class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.03]" />
+        </a>
+        <nav class="hidden lg:flex items-center gap-9 text-[15px] font-semibold text-brand-ink" aria-label="Primary">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link active text-brand-dark" href="about-us.html">About Us</a>
+          <a class="nav-link" href="careers.html">Careers</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="nav-link" href="privacy-policy.html">Privacy Policy</a>
+          <a href="contact.html" class="btn btn-navy px-6 py-2.5 ml-2">Contact Us</a>
+        </nav>
+        <button id="menuToggle" class="lg:hidden flex flex-col gap-[5px] p-2" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span class="block w-6 h-[2px] bg-brand-dark transition-transform duration-300"></span>
+          <span class="block w-6 h-[2px] bg-brand-dark transition-opacity duration-300"></span>
+          <span class="block w-6 h-[2px] bg-brand-dark transition-transform duration-300"></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="lg:hidden hidden bg-white border-t border-slate-100 shadow-lg">
+      <nav class="px-6 py-6 flex flex-col gap-5 text-base font-semibold text-brand-ink" aria-label="Mobile">
+        <a href="index.html">Home</a>
+        <a class="text-brand-dark" href="about-us.html">About Us</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="contact.html" class="btn btn-navy px-6 py-3 mt-2 self-start">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======================= PAGE HERO ======================= -->
+  <section class="page-hero relative pt-36 pb-20 lg:pt-44 lg:pb-24 overflow-hidden">
+    <div class="absolute -top-20 right-0 w-80 h-80 rounded-full bg-brand/30 blur-3xl pointer-events-none"></div>
+    <div class="relative max-w-7xl mx-auto px-6">
+      <nav class="hero-enter text-xs font-bold uppercase tracking-[0.25em] text-white/60" aria-label="Breadcrumb">
+        <a href="index.html" class="hover:text-white transition-colors">Home</a>
+        <span class="mx-2 text-white/30">/</span>
+        <span class="text-white/90">About Us</span>
+      </nav>
+      <h1 class="hero-enter hero-enter-delay-1 mt-6 font-display font-bold text-white text-4xl sm:text-5xl lg:text-6xl leading-tight balance">
+        About Us
+      </h1>
+      <p class="hero-enter hero-enter-delay-2 mt-6 text-white/80 text-lg sm:text-xl font-medium max-w-2xl leading-relaxed">
+        Pioneering sustainable electrification solutions and clean energy technologies.
+      </p>
+    </div>
+  </section>
+
+  <!-- ======================= OUR MISSION ======================= -->
+  <section class="relative bg-white py-24 lg:py-28 overflow-hidden">
+    <span class="pointer-events-none absolute -top-10 right-0 font-display font-bold text-brand-dark/[0.04] text-[22rem] leading-none select-none hidden lg:block">L</span>
+    <div class="relative max-w-5xl mx-auto px-6">
+      <p class="reveal inline-flex items-center gap-3 text-brand font-bold uppercase tracking-[0.25em] text-xs">
+        <span class="block w-8 h-px bg-brand/40"></span> Our Mission
+      </p>
+      <blockquote class="reveal reveal-delay-1 mt-7">
+        <p class="font-display font-semibold text-brand-dark text-2xl sm:text-3xl lg:text-[2.4rem] leading-snug">
+          &ldquo;Beyond Carbon. Toward Brilliance.&rdquo;
+        </p>
+      </blockquote>
+      <p class="reveal reveal-delay-2 mt-7 text-slate-600 text-base sm:text-lg leading-relaxed max-w-3xl">
+        LORILLION Limited is a UK-registered company headquartered in the West Midlands, with a base in Prague.
+        We are pioneering sustainable electrification solutions and clean energy technologies — beyond carbon, toward brilliance.
+      </p>
+
+      <div class="mt-12 grid sm:grid-cols-3 gap-5">
+        <div class="reveal reveal-delay-1 bg-slate-50 border border-slate-100 rounded-2xl p-7">
+          <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-brand text-white font-bold font-display text-lg">WM</div>
+          <h3 class="mt-5 font-semibold text-brand-dark">Headquarters</h3>
+          <p class="mt-1 text-sm text-slate-500">West Midlands, United Kingdom</p>
+        </div>
+        <div class="reveal reveal-delay-2 bg-slate-50 border border-slate-100 rounded-2xl p-7">
+          <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-brand text-white font-bold font-display text-lg">PRG</div>
+          <h3 class="mt-5 font-semibold text-brand-dark">Base</h3>
+          <p class="mt-1 text-sm text-slate-500">Prague, Czech Republic</p>
+        </div>
+        <div class="reveal reveal-delay-3 bg-slate-50 border border-slate-100 rounded-2xl p-7">
+          <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-brand text-white font-bold font-display text-lg">@</div>
+          <h3 class="mt-5 font-semibold text-brand-dark">Get in touch</h3>
+          <a href="mailto:info@lorillion.com" class="mt-1 text-sm text-brand hover:underline">info@lorillion.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= OUR BASES ======================= -->
+  <section class="relative bg-[#f4f4f9] py-24 lg:py-28">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-14 items-center">
+        <div>
+          <p class="reveal inline-flex items-center gap-3 text-brand font-bold uppercase tracking-[0.25em] text-xs">
+            <span class="block w-8 h-px bg-brand/40"></span> Where We Are
+          </p>
+          <h2 class="reveal reveal-delay-1 mt-5 font-display font-bold text-brand-dark text-3xl sm:text-4xl lg:text-5xl leading-tight">
+            Two bases, one mission
+          </h2>
+          <p class="reveal reveal-delay-2 mt-5 text-slate-600 text-base sm:text-lg leading-relaxed max-w-xl">
+            Headquartered in the West Midlands with a base in Prague. Hover a card to open its location in Google Maps.
+          </p>
+        </div>
+
+        <div class="reveal reveal-delay-1 flex flex-col gap-5">
+          <!-- West Midlands -->
+          <a href="https://www.google.com/maps/search/?api=1&query=52.4750743,-1.829833"
+             target="_blank" rel="noopener"
+             class="map-card group flex items-center gap-5 rounded-3xl border border-slate-100 bg-white p-6 sm:p-7">
+            <span class="map-icon flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand text-white border border-transparent">
+              <svg class="map-pin map-pin-pulse w-5 h-5 relative" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+            </span>
+            <span class="flex-1 text-left">
+              <span class="map-title block text-base font-semibold text-brand-dark">West Midlands</span>
+              <span class="map-subtitle block mt-1 text-sm text-slate-500">Headquarters &middot; United Kingdom</span>
+              <span class="map-link-label inline-flex items-center gap-2 mt-3 text-sm font-bold text-white">
+                Open in Google Maps
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6-6m6 6l-6 6"/></svg>
+              </span>
+            </span>
+          </a>
+
+          <!-- Prague -->
+          <a href="https://www.google.com/maps/search/?api=1&query=50.0755,14.4378"
+             target="_blank" rel="noopener"
+             class="map-card group flex items-center gap-5 rounded-3xl border border-slate-100 bg-white p-6 sm:p-7">
+            <span class="map-icon flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand text-white border border-transparent">
+              <svg class="map-pin map-pin-pulse w-5 h-5 relative" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+            </span>
+            <span class="flex-1 text-left">
+              <span class="map-title block text-base font-semibold text-brand-dark">Prague</span>
+              <span class="map-subtitle block mt-1 text-sm text-slate-500">Base &middot; Czech Republic</span>
+              <span class="map-link-label inline-flex items-center gap-2 mt-3 text-sm font-bold text-white">
+                Open in Google Maps
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6-6m6 6l-6 6"/></svg>
+              </span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= NEWS & UPDATES ======================= -->
+  <section id="news" class="relative bg-white py-24 lg:py-28 scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-wrap items-end justify-between gap-6">
+        <div>
+          <p class="reveal inline-flex items-center gap-3 text-brand font-bold uppercase tracking-[0.25em] text-xs">
+            <span class="block w-8 h-px bg-brand/40"></span> News &amp; Updates
+          </p>
+          <h2 class="reveal reveal-delay-1 mt-5 font-display font-bold text-brand-dark text-3xl sm:text-4xl leading-tight">
+            Company announcements
+          </h2>
+        </div>
+        <span class="reveal reveal-delay-2 demo-note">Demo &middot; content from live site</span>
+      </div>
+
+      <div class="mt-12 grid md:grid-cols-3 gap-6">
+        <!-- Press & Media -->
+        <a href="https://www.lorillion.com/about-us/press-and-media/" target="_blank" rel="noopener"
+           class="reveal focus-card group relative bg-slate-50 border border-slate-100 rounded-3xl p-8 overflow-hidden block">
+          <span class="absolute top-0 right-0 w-24 h-24 bg-brand/[0.07] rounded-bl-[3rem]"></span>
+          <div class="relative">
+            <span class="text-xs font-bold uppercase tracking-wider text-brand">Press &amp; Media</span>
+            <h3 class="mt-4 font-display font-bold text-brand-dark text-xl leading-snug">Press &amp; Media</h3>
+            <p class="mt-3 text-sm text-slate-500 leading-relaxed">Media enquiries and announcements.</p>
+            <span class="mt-5 inline-flex items-center gap-2 text-sm font-bold text-brand">
+              Visit page
+              <svg class="focus-arrow w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6-6m6 6l-6 6"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- Subsea Craft Investment -->
+        <a href="https://www.lorillion.com/subsea-craft-investment-in-lorillion/" target="_blank" rel="noopener"
+           class="reveal reveal-delay-1 focus-card group relative bg-slate-50 border border-slate-100 rounded-3xl p-8 overflow-hidden block">
+          <span class="absolute top-0 right-0 w-24 h-24 bg-brand/[0.07] rounded-bl-[3rem]"></span>
+          <div class="relative">
+            <span class="text-xs font-bold uppercase tracking-wider text-brand">Investment</span>
+            <h3 class="mt-4 font-display font-bold text-brand-dark text-xl leading-snug">Subsea Craft Investment in Lorillion</h3>
+            <p class="mt-3 text-sm text-slate-500 leading-relaxed">Update on the Subsea Craft investment.</p>
+            <span class="mt-5 inline-flex items-center gap-2 text-sm font-bold text-brand">
+              Visit page
+              <svg class="focus-arrow w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6-6m6 6l-6 6"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- Project Dualcharge -->
+        <a href="https://www.lorillion.com/project-dualcharge-25072025/" target="_blank" rel="noopener"
+           class="reveal reveal-delay-2 focus-card group relative bg-slate-50 border border-slate-100 rounded-3xl p-8 overflow-hidden block">
+          <span class="absolute top-0 right-0 w-24 h-24 bg-brand/[0.07] rounded-bl-[3rem]"></span>
+          <div class="relative">
+            <span class="text-xs font-bold uppercase tracking-wider text-brand">Project</span>
+            <h3 class="mt-4 font-display font-bold text-brand-dark text-xl leading-snug">Project Dualcharge</h3>
+            <p class="mt-3 text-sm text-slate-500 leading-relaxed">Latest update on Project Dualcharge.</p>
+            <span class="mt-5 inline-flex items-center gap-2 text-sm font-bold text-brand">
+              Visit page
+              <svg class="focus-arrow w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6-6m6 6l-6 6"/></svg>
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= CTA ======================= -->
+  <section class="relative page-hero text-white py-20 lg:py-24 overflow-hidden">
+    <div class="relative max-w-4xl mx-auto px-6 text-center">
+      <h2 class="reveal font-display font-bold text-3xl sm:text-4xl leading-tight balance">
+        Beyond Carbon. Toward Brilliance.
+      </h2>
+      <p class="reveal reveal-delay-1 mt-5 text-white/80 text-lg">
+        Pioneering sustainable electrification solutions and clean energy technologies.
+      </p>
+      <div class="reveal reveal-delay-2 mt-9 flex flex-wrap justify-center gap-5">
+        <a href="contact.html" class="btn btn-white px-10 py-4 text-[15px]">Contact Us</a>
+        <a href="careers.html" class="btn btn-outline px-10 py-4 text-[15px]">Careers</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="relative bg-brand-dark text-white">
+    <div class="max-w-7xl mx-auto px-6 pt-16 pb-10">
+      <div class="flex flex-col lg:flex-row lg:items-start justify-between gap-12">
+        <div class="max-w-sm">
+          <a href="index.html" class="inline-flex items-center gap-3">
+            <img src="assets/logo.png" alt="LORILLION Limited logo" class="h-12 w-auto object-contain brightness-0 invert" />
+          </a>
+          <p class="mt-6 text-white/70 text-sm leading-relaxed">
+            Pioneering sustainable electrification solutions and clean energy technologies.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-[0.25em] text-white/50">Explore</h3>
+          <ul class="mt-5 space-y-3 text-[15px]">
+            <li><a class="footer-link text-white/85" href="index.html">Home</a></li>
+            <li><a class="footer-link text-white/85" href="about-us.html">About Us</a></li>
+            <li><a class="footer-link text-white/85" href="careers.html">Careers</a></li>
+            <li><a class="footer-link text-white/85" href="contact.html">Contact</a></li>
+            <li><a class="footer-link text-white/85" href="about-us.html#news">News &amp; Updates</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-[0.25em] text-white/50">Company</h3>
+          <ul class="mt-5 space-y-3 text-[15px] text-white/85">
+            <li>LORILLION Limited</li>
+            <li>UK-registered company</li>
+            <li>West Midlands, United Kingdom</li>
+            <li>Prague, Czech Republic</li>
+            <li><a class="footer-link text-white/85" href="mailto:info@lorillion.com">info@lorillion.com</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-[0.25em] text-white/50">Legal</h3>
+          <ul class="mt-5 space-y-3 text-[15px]">
+            <li><a class="footer-link text-white/85" href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a class="footer-link text-white/85" href="careers.html#vacancies">Vacancies</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-14 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+        <p class="text-[13px] text-white/60">
+          LORILLION Limited is a UK-registered company with Company Number 15115079.
+        </p>
+        <p class="text-[13px] text-white/60">&copy; Copyright. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/site.js"></script>
+</body>
+</html>

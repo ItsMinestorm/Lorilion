@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Careers — LORILLION Limited</title>
+  <meta name="description" content="Careers at LORILLION Limited — join a team pioneering sustainable electrification solutions and clean energy technologies." />
+  <link rel="icon" type="image/x-icon" href="assets/logo.png" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: { DEFAULT: '#282667', dark: '#101544', ink: '#303030' } },
+          fontFamily: { display: ['Merriweather', 'Georgia', 'serif'], sans: ['Montserrat', 'Arial', 'Helvetica', 'sans-serif'] }
+        }
+      }
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/site.css" />
+</head>
+
+<body class="bg-white text-brand-ink antialiased">
+
+  <!-- ======================= HEADER ======================= -->
+  <header id="siteHeader" class="fixed top-0 inset-x-0 z-50 bg-white/95">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3 group" aria-label="LORILLION Limited — Home">
+          <img src="assets/logo.png" alt="LORILLION Limited logo"
+               class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.03]" />
+        </a>
+        <nav class="hidden lg:flex items-center gap-9 text-[15px] font-semibold text-brand-ink" aria-label="Primary">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="about-us.html">About Us</a>
+          <a class="nav-link active text-brand-dark" href="careers.html">Careers</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="nav-link" href="privacy-policy.html">Privacy Policy</a>
+          <a href="contact.html" class="btn btn-navy px-6 py-2.5 ml-2">Contact Us</a>
+        </nav>
+        <button id="menuToggle" class="lg:hidden flex flex-col gap-[5px] p-2" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span class="block w-6 h-[2px] bg-brand-dark transition-transform duration-300"></span>
+          <span class="block w-6 h-[2px] bg-brand-dark transition-opacity duration-300"></span>
+          <span class="block w-6 h-[2px] bg-brand-dark transition-transform duration-300"></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="lg:hidden hidden bg-white border-t border-slate-100 shadow-lg">
+      <nav class="px-6 py-6 flex flex-col gap-5 text-base font-semibold text-brand-ink" aria-label="Mobile">
+        <a href="index.html">Home</a>
+        <a href="about-us.html">About Us</a>
+        <a class="text-brand-dark" href="careers.html">Careers</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="#vacancies" class="btn btn-navy px-6 py-3 mt-2 self-start">View Vacancies</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======================= PAGE HERO ======================= -->
+  <section class="page-hero relative pt-36 pb-20 lg:pt-44 lg:pb-24 overflow-hidden">
+    <div class="absolute -top-20 right-0 w-80 h-80 rounded-full bg-brand/30 blur-3xl pointer-events-none"></div>
+    <div class="relative max-w-7xl mx-auto px-6">
+      <nav class="hero-enter text-xs font-bold uppercase tracking-[0.25em] text-white/60" aria-label="Breadcrumb">
+        <a href="index.html" class="hover:text-white transition-colors">Home</a>
+        <span class="mx-2 text-white/30">/</span>
+        <span class="text-white/90">Careers</span>
+      </nav>
+      <h1 class="hero-enter hero-enter-delay-1 mt-6 font-display font-bold text-white text-4xl sm:text-5xl lg:text-6xl leading-tight balance">
+        Careers
+      </h1>
+      <p class="hero-enter hero-enter-delay-2 mt-6 text-white/80 text-lg sm:text-xl font-medium max-w-2xl leading-relaxed">
+        Be part of the mission — beyond carbon, toward brilliance.
+      </p>
+    </div>
+  </section>
+
+  <!-- ======================= INTRO ======================= -->
+  <section class="relative bg-white py-24 lg:py-28 overflow-hidden">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="grid lg:grid-cols-12 gap-12 items-start">
+        <div class="lg:col-span-4">
+          <div class="reveal">
+            <span class="text-brand font-bold uppercase tracking-[0.25em] text-xs">Working With Us</span>
+            <div class="mt-4 h-[3px] w-14 bg-brand rounded-full"></div>
+          </div>
+        </div>
+        <div class="lg:col-span-8">
+          <p class="reveal font-display font-semibold text-brand-dark text-2xl sm:text-3xl leading-snug">
+            Help us pioneer the future of clean energy.
+          </p>
+          <p class="reveal reveal-delay-1 mt-6 text-slate-600 text-base sm:text-lg leading-relaxed max-w-3xl">
+            We are building the team that will deliver pioneering sustainable electrification solutions and
+            clean energy technologies. If our mission motivates you, we would love to hear from you.
+          </p>
+
+          <div class="reveal reveal-delay-2 mt-10 grid sm:grid-cols-3 gap-5">
+            <div class="bg-slate-50 border border-slate-100 rounded-2xl p-6">
+              <div class="font-display text-2xl font-bold text-brand">UK</div>
+              <p class="mt-2 text-sm font-semibold text-brand-ink">Base</p>
+              <p class="mt-1 text-sm text-slate-500">West Midlands</p>
+            </div>
+            <div class="bg-slate-50 border border-slate-100 rounded-2xl p-6">
+              <div class="font-display text-2xl font-bold text-brand">EU</div>
+              <p class="mt-2 text-sm font-semibold text-brand-ink">Base</p>
+              <p class="mt-1 text-sm text-slate-500">Prague, Czech Republic</p>
+            </div>
+            <div class="bg-slate-50 border border-slate-100 rounded-2xl p-6">
+              <div class="font-display text-2xl font-bold text-brand">@</div>
+              <p class="mt-2 text-sm font-semibold text-brand-ink">Email</p>
+              <a href="mailto:info@lorillion.com" class="mt-1 text-sm text-brand hover:underline">info@lorillion.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= VACANCIES ======================= -->
+  <section id="vacancies" class="relative bg-[#f4f4f9] py-24 lg:py-28 scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-wrap items-end justify-between gap-6">
+        <div>
+          <p class="reveal inline-flex items-center gap-3 text-brand font-bold uppercase tracking-[0.25em] text-xs">
+            <span class="block w-8 h-px bg-brand/40"></span> Open Roles
+          </p>
+          <h2 class="reveal reveal-delay-1 mt-5 font-display font-bold text-brand-dark text-3xl sm:text-4xl leading-tight">
+            Vacancies
+          </h2>
+        </div>
+        <span class="reveal reveal-delay-2 demo-note">Demo &middot; skeleton</span>
+      </div>
+
+      <div class="mt-12 grid md:grid-cols-3 gap-6">
+        <!-- Skeleton role cards -->
+        <div class="reveal bg-white border border-slate-100 rounded-3xl p-8">
+          <span class="text-xs font-bold uppercase tracking-wider text-brand">To be announced</span>
+          <h3 class="mt-4 font-display font-bold text-brand-dark text-xl">Role title</h3>
+          <p class="mt-3 text-sm text-slate-500 leading-relaxed">Role description will appear here when the position opens.</p>
+          <span class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-400">&mdash; Coming soon</span>
+        </div>
+
+        <div class="reveal reveal-delay-1 bg-white border border-slate-100 rounded-3xl p-8">
+          <span class="text-xs font-bold uppercase tracking-wider text-brand">To be announced</span>
+          <h3 class="mt-4 font-display font-bold text-brand-dark text-xl">Role title</h3>
+          <p class="mt-3 text-sm text-slate-500 leading-relaxed">Role description will appear here when the position opens.</p>
+          <span class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-400">&mdash; Coming soon</span>
+        </div>
+
+        <div class="reveal reveal-delay-2 bg-white border border-slate-100 rounded-3xl p-8">
+          <span class="text-xs font-bold uppercase tracking-wider text-brand">To be announced</span>
+          <h3 class="mt-4 font-display font-bold text-brand-dark text-xl">Role title</h3>
+          <p class="mt-3 text-sm text-slate-500 leading-relaxed">Role description will appear here when the position opens.</p>
+          <span class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-400">&mdash; Coming soon</span>
+        </div>
+      </div>
+
+      <!-- Vacancies entry point -->
+      <div class="reveal reveal-delay-2 mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 rounded-3xl border border-slate-100 bg-white p-8 sm:p-10">
+        <div>
+          <h3 class="font-display font-bold text-brand-dark text-2xl leading-snug">See all open positions</h3>
+          <p class="mt-2 text-slate-600 text-sm sm:text-base">The full list of vacancies is maintained on our careers pages.</p>
+        </div>
+        <a href="https://www.lorillion.com/careers/vacancies/" target="_blank" rel="noopener"
+           class="btn btn-navy px-8 py-3.5 text-[15px] shrink-0">Vacancies</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= CTA ======================= -->
+  <section class="relative page-hero text-white py-20 lg:py-24 overflow-hidden">
+    <div class="relative max-w-4xl mx-auto px-6 text-center">
+      <h2 class="reveal font-display font-bold text-3xl sm:text-4xl leading-tight balance">
+        Beyond Carbon. Toward Brilliance.
+      </h2>
+      <p class="reveal reveal-delay-1 mt-5 text-white/80 text-lg">
+        Reach out and introduce yourself — we would love to hear from you.
+      </p>
+      <div class="reveal reveal-delay-2 mt-9 flex flex-wrap justify-center gap-5">
+        <a href="mailto:info@lorillion.com" class="btn btn-white px-10 py-4 text-[15px]">Email Us</a>
+        <a href="contact.html" class="btn btn-outline px-10 py-4 text-[15px]">Contact</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="relative bg-brand-dark text-white">
+    <div class="max-w-7xl mx-auto px-6 pt-16 pb-10">
+      <div class="flex flex-col lg:flex-row lg:items-start justify-between gap-12">
+        <div class="max-w-sm">
+          <a href="index.html" class="inline-flex items-center gap-3">
+            <img src="assets/logo.png" alt="LORILLION Limited logo" class="h-12 w-auto object-contain brightness-0 invert" />
+          </a>
+          <p class="mt-6 text-white/70 text-sm leading-relaxed">
+            Pioneering sustainable electrification solutions and clean energy technologies.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-[0.25em] text-white/50">Explore</h3>
+          <ul class="mt-5 space-y-3 text-[15px]">
+            <li><a class="footer-link text-white/85" href="index.html">Home</a></li>
+            <li><a class="footer-link text-white/85" href="about-us.html">About Us</a></li>
+            <li><a class="footer-link text-white/85" href="careers.html">Careers</a></li>
+            <li><a class="footer-link text-white/85" href="contact.html">Contact</a></li>
+            <li><a class="footer-link text-white/85" href="about-us.html#news">News &amp; Updates</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-[0.25em] text-white/50">Company</h3>
+          <ul class="mt-5 space-y-3 text-[15px] text-white/85">
+            <li>LORILLION Limited</li>
+            <li>UK-registered company</li>
+            <li>West Midlands, United Kingdom</li>
+            <li>Prague, Czech Republic</li>
+            <li><a class="footer-link text-white/85" href="mailto:info@lorillion.com">info@lorillion.com</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-[0.25em] text-white/50">Legal</h3>
+          <ul class="mt-5 space-y-3 text-[15px]">
+            <li><a class="footer-link text-white/85" href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a class="footer-link text-white/85" href="careers.html#vacancies">Vacancies</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-14 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+        <p class="text-[13px] text-white/60">
+          LORILLION Limited is a UK-registered company with Company Number 15115079.
+        </p>
+        <p class="text-[13px] text-white/60">&copy; Copyright. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/site.js"></script>
+</body>
+</html>
