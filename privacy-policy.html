@@ -12,8 +12,15 @@
     tailwind.config = {
       theme: {
         extend: {
-          colors: { brand: { DEFAULT: '#282667', dark: '#101544', ink: '#303030' } },
-          fontFamily: { display: ['Merriweather', 'Georgia', 'serif'], sans: ['Montserrat', 'Arial', 'Helvetica', 'sans-serif'] }
+          colors: {
+            space: { DEFAULT: '#060a14', panel: '#0b1322' },
+            brand: { DEFAULT: '#22d3ee', dark: '#101544', ink: '#cbd5e1' }
+          },
+          fontFamily: {
+            display: ['Orbitron', 'Arial', 'sans-serif'],
+            sans:    ['Exo 2', 'Arial', 'Helvetica', 'sans-serif'],
+            mono:    ['Share Tech Mono', 'Consolas', 'monospace']
+          }
         }
       }
     };
@@ -21,192 +28,201 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Orbitron:wght@500;600;700;800;900&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/site.css" />
 </head>
 
-<body class="bg-white text-brand-ink antialiased">
+<body class="bg-space text-brand-ink antialiased">
 
   <!-- ======================= HEADER ======================= -->
-  <header id="siteHeader" class="fixed top-0 inset-x-0 z-50 bg-white/95">
+  <header id="siteHeader" class="fixed top-0 inset-x-0 z-50 bg-space/80">
     <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-      <div class="flex items-center justify-between h-20">
+      <div class="flex items-center justify-between h-20 border-b border-cyan-500/10">
         <a href="index.html" class="flex items-center gap-3 group" aria-label="LORILLION Limited — Home">
-          <img src="assets/logo.png" alt="LORILLION Limited logo"
-               class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.03]" />
+          <span class="relative inline-flex">
+            <span class="online-dot absolute -left-1 -top-1 h-2 w-2 rounded-full bg-cyan-400"></span>
+            <img src="assets/logo.png" alt="LORILLION Limited logo"
+                 class="h-10 sm:h-11 w-auto object-contain brightness-0 invert transition-all duration-300 group-hover:drop-shadow-[0_0_10px_rgba(34,211,238,.6)]" />
+          </span>
+          <span class="hidden sm:flex flex-col leading-none">
+            <span class="font-display font-bold text-white text-sm tracking-[0.18em]">LORILLION</span>
+            <span class="font-mono2 text-[9px] tracking-[0.32em] text-cyan-400 mt-1">CLEAN ENERGY DIVISION</span>
+          </span>
         </a>
-        <nav class="hidden lg:flex items-center gap-9 text-[15px] font-semibold text-brand-ink" aria-label="Primary">
+        <nav class="hidden lg:flex items-center gap-9 text-[15px] font-semibold text-slate-300" aria-label="Primary">
           <a class="nav-link" href="index.html">Home</a>
           <a class="nav-link" href="about-us.html">About Us</a>
           <a class="nav-link" href="careers.html">Careers</a>
           <a class="nav-link" href="contact.html">Contact</a>
-          <a class="nav-link active text-brand-dark" href="privacy-policy.html">Privacy Policy</a>
-          <a href="contact.html" class="btn btn-navy px-6 py-2.5 ml-2">Contact Us</a>
+          <a class="nav-link active text-cyan-300" href="privacy-policy.html">Privacy Policy</a>
+          <a href="contact.html" class="btn btn-sci btn-cyan px-6 py-2.5 ml-2 text-sm">Contact Us</a>
         </nav>
         <button id="menuToggle" class="lg:hidden flex flex-col gap-[5px] p-2" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-          <span class="block w-6 h-[2px] bg-brand-dark transition-transform duration-300"></span>
-          <span class="block w-6 h-[2px] bg-brand-dark transition-opacity duration-300"></span>
-          <span class="block w-6 h-[2px] bg-brand-dark transition-transform duration-300"></span>
+          <span class="block w-6 h-[2px] bg-cyan-400 transition-transform duration-300"></span>
+          <span class="block w-6 h-[2px] bg-cyan-400 transition-opacity duration-300"></span>
+          <span class="block w-6 h-[2px] bg-cyan-400 transition-transform duration-300"></span>
         </button>
       </div>
     </div>
-    <div id="mobileMenu" class="lg:hidden hidden bg-white border-t border-slate-100 shadow-lg">
-      <nav class="px-6 py-6 flex flex-col gap-5 text-base font-semibold text-brand-ink" aria-label="Mobile">
+    <div id="mobileMenu" class="lg:hidden hidden bg-space border-t border-cyan-500/20">
+      <nav class="px-6 py-6 flex flex-col gap-5 text-base font-semibold text-slate-300" aria-label="Mobile">
         <a href="index.html">Home</a>
         <a href="about-us.html">About Us</a>
         <a href="careers.html">Careers</a>
         <a href="contact.html">Contact</a>
-        <a class="text-brand-dark" href="privacy-policy.html">Privacy Policy</a>
+        <a class="text-cyan-300" href="privacy-policy.html">Privacy Policy</a>
       </nav>
     </div>
   </header>
 
   <!-- ======================= PAGE HERO ======================= -->
-  <section class="page-hero relative pt-36 pb-20 lg:pt-44 lg:pb-24 overflow-hidden">
-    <div class="absolute -top-20 right-0 w-80 h-80 rounded-full bg-brand/30 blur-3xl pointer-events-none"></div>
+  <section class="relative pt-36 pb-24 lg:pt-44 lg:pb-28 overflow-hidden">
+    <div class="absolute inset-0 grid-bg opacity-40"></div>
+    <div class="absolute inset-0" style="background:radial-gradient(circle at 75% 25%, rgba(34,211,238,.14), transparent 55%);"></div>
+    <div class="absolute -top-20 right-0 w-96 h-96 rounded-full bg-cyan-500/10 blur-3xl pointer-events-none"></div>
+
     <div class="relative max-w-7xl mx-auto px-6">
-      <nav class="hero-enter text-xs font-bold uppercase tracking-[0.25em] text-white/60" aria-label="Breadcrumb">
-        <a href="index.html" class="hover:text-white transition-colors">Home</a>
-        <span class="mx-2 text-white/30">/</span>
-        <span class="text-white/90">Privacy Policy</span>
+      <nav class="hero-enter font-mono2 text-xs font-bold uppercase tracking-[0.28em] text-cyan-400/70" aria-label="Breadcrumb">
+        <a href="index.html" class="hover:text-cyan-300 transition-colors">Home</a>
+        <span class="mx-2 text-slate-600">/</span>
+        <span class="text-cyan-300">Privacy Policy</span>
       </nav>
-      <h1 class="hero-enter hero-enter-delay-1 mt-6 font-display font-bold text-white text-4xl sm:text-5xl lg:text-6xl leading-tight balance">
+      <h1 class="hero-enter hero-enter-delay-1 mt-6 font-display font-black text-white text-4xl sm:text-5xl lg:text-6xl leading-tight glow-white">
         Privacy Policy
       </h1>
-      <p class="hero-enter hero-enter-delay-2 mt-6 text-white/80 text-lg sm:text-xl font-medium max-w-2xl leading-relaxed">
+      <p class="hero-enter hero-enter-delay-2 mt-6 text-slate-300 text-lg sm:text-xl font-medium max-w-2xl leading-relaxed">
         How LORILLION Limited handles your information.
       </p>
+      <div class="hero-enter hero-enter-delay-3 mt-8 h-px w-40 bg-gradient-to-r from-cyan-400 to-transparent shadow-[0_0_10px_rgba(34,211,238,.6)]"></div>
     </div>
   </section>
 
   <!-- ======================= POLICY BODY ======================= -->
-  <section class="relative bg-white py-24 lg:py-28">
-    <div class="max-w-3xl mx-auto px-6">
+  <section class="relative bg-space py-24 lg:py-28 overflow-hidden">
+    <div class="absolute inset-0 grid-bg opacity-25"></div>
+    <div class="relative max-w-3xl mx-auto px-6">
 
-      <div class="reveal flex items-center gap-4">
+      <div class="reveal inline-flex items-center gap-4">
         <span class="demo-note">Demo &middot; to be finalised</span>
       </div>
 
-      <!-- Intro -->
       <div class="reveal reveal-delay-1 mt-8">
-        <h2 class="font-display font-bold text-brand-dark text-2xl sm:text-3xl">1. Introduction</h2>
-        <p class="mt-4 text-slate-600 leading-relaxed">
+        <h2 class="font-display font-bold text-white text-2xl sm:text-3xl">1. Introduction</h2>
+        <p class="mt-4 text-slate-400 leading-relaxed">
           This policy explains how LORILLION Limited handles personal information on this website.
           Content on this page is a draft structure for the demo and should be reviewed and finalised
           before it is published.
         </p>
       </div>
 
-      <!-- Data we collect -->
       <div class="reveal mt-12">
-        <h2 class="font-display font-bold text-brand-dark text-2xl sm:text-3xl">2. Information we collect</h2>
-        <p class="mt-4 text-slate-600 leading-relaxed">
+        <h2 class="font-display font-bold text-white text-2xl sm:text-3xl">2. Information we collect</h2>
+        <p class="mt-4 text-slate-400 leading-relaxed">
           This site uses third-party website tracking technologies to provide and continually improve our
           services, and to display advertisements according to users&rsquo; interests. You may revoke or
           change your consent at any time with effect for the future.
         </p>
       </div>
 
-      <!-- Third-party services -->
       <div class="reveal mt-12">
-        <h2 class="font-display font-bold text-brand-dark text-2xl sm:text-3xl">3. Third-party services</h2>
-        <p class="mt-4 text-slate-600 leading-relaxed">
+        <h2 class="font-display font-bold text-white text-2xl sm:text-3xl">3. Third-party services</h2>
+        <p class="mt-4 text-slate-400 leading-relaxed">
           The following services are used on this website and may process data about your activity:
         </p>
         <ul class="mt-6 space-y-3">
-          <li class="flex items-center gap-4 rounded-2xl border border-slate-100 bg-slate-50 p-5">
-            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand text-white text-sm font-bold">&#9203;</span>
-            <span class="font-semibold text-brand-dark">Website Translator</span>
+          <li class="flex items-center gap-4 hud p-5">
+            <span class="hud-line"></span>
+            <span class="flex h-10 w-10 shrink-0 items-center justify-center border border-cyan-400/40 text-cyan-400 font-display font-bold text-sm">&#9203;</span>
+            <span class="font-semibold text-white">Website Translator</span>
           </li>
-          <li class="flex items-center gap-4 rounded-2xl border border-slate-100 bg-slate-50 p-5">
-            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand text-white text-sm font-bold">&#9632;</span>
-            <span class="font-semibold text-brand-dark">IONOS SiteAnalytics</span>
+          <li class="flex items-center gap-4 hud p-5">
+            <span class="hud-line"></span>
+            <span class="flex h-10 w-10 shrink-0 items-center justify-center border border-cyan-400/40 text-cyan-400 font-display font-bold text-sm">&#9632;</span>
+            <span class="font-semibold text-white">IONOS SiteAnalytics</span>
           </li>
-          <li class="flex items-center gap-4 rounded-2xl border border-slate-100 bg-slate-50 p-5">
-            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand text-white text-sm font-bold">&#9873;</span>
-            <span class="font-semibold text-brand-dark">Google Maps</span>
+          <li class="flex items-center gap-4 hud p-5">
+            <span class="hud-line"></span>
+            <span class="flex h-10 w-10 shrink-0 items-center justify-center border border-cyan-400/40 text-cyan-400 font-display font-bold text-sm">&#9873;</span>
+            <span class="font-semibold text-white">Google Maps</span>
           </li>
         </ul>
       </div>
 
-      <!-- Cookies -->
       <div class="reveal mt-12">
-        <h2 class="font-display font-bold text-brand-dark text-2xl sm:text-3xl">4. Cookies &amp; consent</h2>
-        <p class="mt-4 text-slate-600 leading-relaxed">
+        <h2 class="font-display font-bold text-white text-2xl sm:text-3xl">4. Cookies &amp; consent</h2>
+        <p class="mt-4 text-slate-400 leading-relaxed">
           Cookies and similar technologies may be used to provide and continually improve our services,
           and to display advertisements according to users&rsquo; interests. You can configure or reject
           non-essential cookies at any time.
         </p>
       </div>
 
-      <!-- Rights -->
       <div class="reveal mt-12">
-        <h2 class="font-display font-bold text-brand-dark text-2xl sm:text-3xl">5. Your rights</h2>
-        <p class="mt-4 text-slate-600 leading-relaxed">
+        <h2 class="font-display font-bold text-white text-2xl sm:text-3xl">5. Your rights</h2>
+        <p class="mt-4 text-slate-400 leading-relaxed">
           You have rights in relation to your personal information, including the right to access, correct
           or delete data we hold about you. To exercise these rights, please contact us.
         </p>
       </div>
 
-      <!-- Contact -->
       <div class="reveal mt-12">
-        <h2 class="font-display font-bold text-brand-dark text-2xl sm:text-3xl">6. Contact us</h2>
-        <p class="mt-4 text-slate-600 leading-relaxed">
+        <h2 class="font-display font-bold text-white text-2xl sm:text-3xl">6. Contact us</h2>
+        <p class="mt-4 text-slate-400 leading-relaxed">
           For any privacy questions or requests, contact <a href="mailto:info@lorillion.com"
-          class="font-semibold text-brand hover:underline">info@lorillion.com</a> or write to LORILLION
+          class="font-semibold text-cyan-300 hover:text-cyan-200">info@lorillion.com</a> or write to LORILLION
           Limited, West Midlands, United Kingdom.
         </p>
-        <a href="mailto:info@lorillion.com" class="btn btn-navy mt-6 px-8 py-3.5 text-[15px]">Email Us</a>
+        <a href="mailto:info@lorillion.com" class="btn btn-sci btn-cyan mt-6 px-8 py-3.5 text-sm">Email Us</a>
       </div>
 
     </div>
   </section>
 
   <!-- ======================= FOOTER ======================= -->
-  <footer class="relative bg-brand-dark text-white">
+  <footer class="relative bg-[#050912] text-slate-300 border-t border-cyan-500/15">
     <div class="max-w-7xl mx-auto px-6 pt-16 pb-10">
       <div class="flex flex-col lg:flex-row lg:items-start justify-between gap-12">
         <div class="max-w-sm">
           <a href="index.html" class="inline-flex items-center gap-3">
             <img src="assets/logo.png" alt="LORILLION Limited logo" class="h-12 w-auto object-contain brightness-0 invert" />
           </a>
-          <p class="mt-6 text-white/70 text-sm leading-relaxed">
+          <p class="mt-6 text-slate-500 text-sm leading-relaxed">
             Pioneering sustainable electrification solutions and clean energy technologies.
           </p>
         </div>
         <div>
-          <h3 class="text-xs font-bold uppercase tracking-[0.25em] text-white/50">Explore</h3>
+          <h3 class="font-mono2 text-xs font-bold uppercase tracking-[0.3em] text-cyan-500/70">[ Explore ]</h3>
           <ul class="mt-5 space-y-3 text-[15px]">
-            <li><a class="footer-link text-white/85" href="index.html">Home</a></li>
-            <li><a class="footer-link text-white/85" href="about-us.html">About Us</a></li>
-            <li><a class="footer-link text-white/85" href="careers.html">Careers</a></li>
-            <li><a class="footer-link text-white/85" href="contact.html">Contact</a></li>
-            <li><a class="footer-link text-white/85" href="about-us.html#news">News &amp; Updates</a></li>
+            <li><a class="footer-link text-slate-300" href="index.html">Home</a></li>
+            <li><a class="footer-link text-slate-300" href="about-us.html">About Us</a></li>
+            <li><a class="footer-link text-slate-300" href="careers.html">Careers</a></li>
+            <li><a class="footer-link text-slate-300" href="contact.html">Contact</a></li>
+            <li><a class="footer-link text-slate-300" href="about-us.html#news">News &amp; Updates</a></li>
           </ul>
         </div>
         <div>
-          <h3 class="text-xs font-bold uppercase tracking-[0.25em] text-white/50">Company</h3>
-          <ul class="mt-5 space-y-3 text-[15px] text-white/85">
+          <h3 class="font-mono2 text-xs font-bold uppercase tracking-[0.3em] text-cyan-500/70">[ Company ]</h3>
+          <ul class="mt-5 space-y-3 text-[15px] text-slate-300">
             <li>LORILLION Limited</li>
             <li>UK-registered company</li>
             <li>West Midlands, United Kingdom</li>
             <li>Prague, Czech Republic</li>
-            <li><a class="footer-link text-white/85" href="mailto:info@lorillion.com">info@lorillion.com</a></li>
+            <li><a class="footer-link text-slate-300" href="mailto:info@lorillion.com">info@lorillion.com</a></li>
           </ul>
         </div>
         <div>
-          <h3 class="text-xs font-bold uppercase tracking-[0.25em] text-white/50">Legal</h3>
+          <h3 class="font-mono2 text-xs font-bold uppercase tracking-[0.3em] text-cyan-500/70">[ Legal ]</h3>
           <ul class="mt-5 space-y-3 text-[15px]">
-            <li><a class="footer-link text-white/85" href="privacy-policy.html">Privacy Policy</a></li>
-            <li><a class="footer-link text-white/85" href="careers.html#vacancies">Vacancies</a></li>
+            <li><a class="footer-link text-slate-300" href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a class="footer-link text-slate-300" href="careers.html#vacancies">Vacancies</a></li>
           </ul>
         </div>
       </div>
-      <div class="mt-14 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-        <p class="text-[13px] text-white/60">
+      <div class="mt-14 pt-8 border-t border-cyan-500/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+        <p class="font-mono2 text-[12px] text-slate-500">
           LORILLION Limited is a UK-registered company with Company Number 15115079.
         </p>
-        <p class="text-[13px] text-white/60">&copy; Copyright. All rights reserved.</p>
+        <p class="font-mono2 text-[12px] text-slate-500">&copy; Copyright. All rights reserved.</p>
       </div>
     </div>
   </footer>
